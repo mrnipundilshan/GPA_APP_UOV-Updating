@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Dropdownservice extends ChangeNotifier {
+  String f = "dfg";
   var resultlist = [
     'A+ / A',
     'A-',

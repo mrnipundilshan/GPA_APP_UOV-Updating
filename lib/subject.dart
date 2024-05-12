@@ -7,12 +7,14 @@ class Subject extends StatefulWidget {
   final Function(SubjectState) onSubjectStateCreated;
   final String subname;
   final double credit;
+  final Dropdownservice dropdownService;
   late SubjectState subjectState;
 
   Subject(
       {Key? key,
       required this.subname,
       required this.credit,
+      required this.dropdownService,
       required this.onSubjectStateCreated})
       : super(key: key);
 
@@ -26,59 +28,67 @@ class Subject extends StatefulWidget {
 }
 
 class SubjectState extends State<Subject> {
-  String? dropdownValue = null;
-
   double grademarks = 0.0;
   double grademarkscheck = 0.0;
   double aftermultiple = 0.0;
+
   @override
-  Widget build(BuildContext context) {
-    return Consumer<Dropdownservice>(
-      builder: (context, oit, child) => Container(
-        height: 100.0,
-        width: 380,
-        decoration: const BoxDecoration(
-          color: Color.fromARGB(64, 97, 149, 91),
-          borderRadius: BorderRadius.all(Radius.circular(20)),
-        ),
-        margin: EdgeInsets.only(bottom: 10),
-        child: Column(
-          children: [
-            const SizedBox(height: 15),
-            Text(
-              widget.subname,
-              style: const TextStyle(
-                  fontSize: 19.2,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500),
-            ),
-            const SizedBox(height: 8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  "   Credit = ${widget.credit}",
-                  style: const TextStyle(fontSize: 18.0),
-                ),
-                DropdownButton<String>(
-                  value: oit.selectedresult,
+  void initState() {
+    super.initState();
+    // Retrieve initial value from Provider
+    final dropdownService =
+        Provider.of<Dropdownservice>(context, listen: false);
+    widget.dropdownService.setresultvalue(dropdownService.selectedresult);
+  }
+
+  @override
+  Widget build(
+    BuildContext context,
+  ) {
+    return Container(
+      height: 100.0,
+      width: 380,
+      decoration: const BoxDecoration(
+        color: Color.fromARGB(64, 97, 149, 91),
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+      ),
+      margin: EdgeInsets.only(bottom: 10),
+      child: Column(
+        children: [
+          const SizedBox(height: 15),
+          Text(
+            widget.subname,
+            style: const TextStyle(
+                fontSize: 19.2,
+                color: Colors.white,
+                fontWeight: FontWeight.w500),
+          ),
+          const SizedBox(height: 8),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "   Credit = ${widget.credit}",
+                style: const TextStyle(fontSize: 18.0),
+              ),
+              Consumer<Dropdownservice>(
+                builder: (context, d, child) => DropdownButton<String>(
+                  value: widget.dropdownService.selectedresult,
                   onChanged: (String? newValue) {
+                    String? dropdownValue = newValue;
                     setState(() {
-                      dropdownValue = newValue;
+                      widget.dropdownService.selectedresult = newValue;
+                      widget.dropdownService.getresult();
                       if (dropdownValue == "A+ / A") {
-                        oit.setresultvalue(dropdownValue);
                         grademarks = 4.0;
                       }
                       if (dropdownValue == "A-") {
-                        oit.setresultvalue(dropdownValue);
                         grademarks = 3.7;
                       }
                       if (dropdownValue == "B+") {
-                        oit.setresultvalue(dropdownValue);
                         grademarks = 3.3;
                       }
                       if (dropdownValue == "B") {
-                        oit.setresultvalue(dropdownValue);
                         grademarks = 3.0;
                       }
                       if (dropdownValue == "B-") {
@@ -105,10 +115,9 @@ class SubjectState extends State<Subject> {
 
                       grademarkscheck = 1.0;
                       aftermultiple = grademarks * widget.credit;
-                      oit.getresult();
                     });
                   },
-                  items: oit.resultlist
+                  items: widget.dropdownService.resultlist
                       .map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
                       value: value,
@@ -124,10 +133,10 @@ class SubjectState extends State<Subject> {
                         TextStyle(fontSize: 18.0, fontWeight: FontWeight.w700),
                   ), // Set hint text
                 ),
-              ],
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

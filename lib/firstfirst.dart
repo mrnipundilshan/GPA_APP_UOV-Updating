@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newgpa/firstsecond.dart';
+import 'package:newgpa/provider.dart';
 import 'subject.dart';
 
 class firstfirst extends StatefulWidget {
@@ -10,6 +11,13 @@ class firstfirst extends StatefulWidget {
 }
 
 class _firstfirstState extends State<firstfirst> {
+  // Create separate instances of Dropdownservice
+  final Dropdownservice oitDropdownService = Dropdownservice();
+  final Dropdownservice omathsDropdownService = Dropdownservice();
+  final Dropdownservice oproDropdownService = Dropdownservice();
+  final Dropdownservice owebDropdownService = Dropdownservice();
+  final Dropdownservice ostatDropdownService = Dropdownservice();
+
   String finalre = "--";
   int decimalPlaces = 4;
 
@@ -50,6 +58,7 @@ class _firstfirstState extends State<firstfirst> {
                 onSubjectStateCreated: (subjectState) {
                   this.oit = subjectState;
                 },
+                dropdownService: oitDropdownService,
               ),
               Subject(
                 subname: "Foundation of Mathematics",
@@ -57,6 +66,7 @@ class _firstfirstState extends State<firstfirst> {
                 onSubjectStateCreated: (subjectState) {
                   this.omaths = subjectState;
                 },
+                dropdownService: omathsDropdownService,
               ),
               Subject(
                 subname: "Fundamentals of Programming",
@@ -64,6 +74,7 @@ class _firstfirstState extends State<firstfirst> {
                 onSubjectStateCreated: (subjectState) {
                   this.opro = subjectState;
                 },
+                dropdownService: oproDropdownService,
               ),
               Subject(
                 subname: "Fundamentals of Web Programming",
@@ -71,6 +82,7 @@ class _firstfirstState extends State<firstfirst> {
                 onSubjectStateCreated: (subjectState) {
                   this.oweb = subjectState;
                 },
+                dropdownService: owebDropdownService,
               ),
               Subject(
                 subname: "Essentials of Statistics",
@@ -78,6 +90,7 @@ class _firstfirstState extends State<firstfirst> {
                 onSubjectStateCreated: (subjectState) {
                   this.ostat = subjectState;
                 },
+                dropdownService: ostatDropdownService,
               ),
             ],
           ),
@@ -91,7 +104,8 @@ class _firstfirstState extends State<firstfirst> {
               button2(context),
               ElevatedButton(
                 onPressed: () {
-                  // print(oit.dropdownValue);
+                  print(oitDropdownService.selectedresult);
+                  print(omathsDropdownService.selectedresult);
                   // print(omaths.dropdownValue);
                   // print(oit.grademarkscheck);
                   // print(omaths.grademarkscheck);

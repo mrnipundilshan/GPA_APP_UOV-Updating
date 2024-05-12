@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newgpa/firstfirst.dart';
+import 'package:newgpa/provider.dart';
 import 'subject.dart';
 
 class firstsecond extends StatefulWidget {
@@ -10,6 +11,14 @@ class firstsecond extends StatefulWidget {
 }
 
 class _firstsecondState extends State<firstsecond> {
+  // Create separate instances of Dropdownservice
+  final Dropdownservice ooopDropdownService = Dropdownservice();
+  final Dropdownservice odbmsDropdownService = Dropdownservice();
+  final Dropdownservice opmDropdownService = Dropdownservice();
+  final Dropdownservice opcnDropdownService = Dropdownservice();
+  final Dropdownservice oelecDropdownService = Dropdownservice();
+  final Dropdownservice omathcDropdownService = Dropdownservice();
+
   String finalre = "--";
   int decimalPlaces = 4;
 
@@ -51,6 +60,7 @@ class _firstsecondState extends State<firstsecond> {
                 onSubjectStateCreated: (subjectState) {
                   this.ooop = subjectState;
                 },
+                dropdownService: ooopDropdownService,
               ),
               Subject(
                 subname: "Database Management Systems",
@@ -58,6 +68,7 @@ class _firstsecondState extends State<firstsecond> {
                 onSubjectStateCreated: (subjectState) {
                   this.odbms = subjectState;
                 },
+                dropdownService: odbmsDropdownService,
               ),
               Subject(
                 subname: "Project Management",
@@ -65,6 +76,7 @@ class _firstsecondState extends State<firstsecond> {
                 onSubjectStateCreated: (subjectState) {
                   this.opm = subjectState;
                 },
+                dropdownService: opmDropdownService,
               ),
               Subject(
                 subname: "Principles of Computer Networks",
@@ -72,6 +84,7 @@ class _firstsecondState extends State<firstsecond> {
                 onSubjectStateCreated: (subjectState) {
                   this.opcn = subjectState;
                 },
+                dropdownService: opcnDropdownService,
               ),
               Subject(
                 subname: "Electronics and Device Interfacing",
@@ -79,6 +92,7 @@ class _firstsecondState extends State<firstsecond> {
                 onSubjectStateCreated: (subjectState) {
                   this.oelec = subjectState;
                 },
+                dropdownService: oelecDropdownService,
               ),
               Subject(
                 subname: "Mathematics for Computing",
@@ -86,6 +100,7 @@ class _firstsecondState extends State<firstsecond> {
                 onSubjectStateCreated: (subjectState) {
                   this.omathc = subjectState;
                 },
+                dropdownService: omathcDropdownService,
               ),
             ],
           ),

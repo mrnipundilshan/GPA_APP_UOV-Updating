@@ -20,4 +20,8 @@ class Dropdownservice extends ChangeNotifier {
     selectedresult = value;
     notifyListeners();
   }
+
+  getresult() {
+    print(selectedresult);
+  }
 }

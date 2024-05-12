@@ -1,5 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:newgpa/firstsecond.dart';
+import 'package:newgpa/provider.dart';
+import 'package:provider/provider.dart';
 import 'subject.dart';
 
 class firstfirst extends StatefulWidget {
@@ -91,8 +95,10 @@ class _firstfirstState extends State<firstfirst> {
               button2(context),
               ElevatedButton(
                 onPressed: () {
-                  print(oit.dropdownValue);
-                  print(omaths.dropdownValue);
+                  // print(oit.dropdownValue);
+                  // print(omaths.dropdownValue);
+                  // print(oit.grademarkscheck);
+                  // print(omaths.grademarkscheck);
                 },
                 child: Text('check'),
               ),

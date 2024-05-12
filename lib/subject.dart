@@ -34,7 +34,7 @@ class SubjectState extends State<Subject> {
   @override
   Widget build(BuildContext context) {
     return Consumer<Dropdownservice>(
-      builder: (context, value, child) => Container(
+      builder: (context, oit, child) => Container(
         height: 100.0,
         width: 380,
         decoration: const BoxDecoration(
@@ -61,24 +61,24 @@ class SubjectState extends State<Subject> {
                   style: const TextStyle(fontSize: 18.0),
                 ),
                 DropdownButton<String>(
-                  value: value.selectedresult,
+                  value: oit.selectedresult,
                   onChanged: (String? newValue) {
                     setState(() {
                       dropdownValue = newValue;
                       if (dropdownValue == "A+ / A") {
-                        value.setresultvalue(dropdownValue);
+                        oit.setresultvalue(dropdownValue);
                         grademarks = 4.0;
                       }
                       if (dropdownValue == "A-") {
-                        value.setresultvalue(dropdownValue);
+                        oit.setresultvalue(dropdownValue);
                         grademarks = 3.7;
                       }
                       if (dropdownValue == "B+") {
-                        value.setresultvalue(dropdownValue);
+                        oit.setresultvalue(dropdownValue);
                         grademarks = 3.3;
                       }
                       if (dropdownValue == "B") {
-                        value.setresultvalue(dropdownValue);
+                        oit.setresultvalue(dropdownValue);
                         grademarks = 3.0;
                       }
                       if (dropdownValue == "B-") {
@@ -105,9 +105,10 @@ class SubjectState extends State<Subject> {
 
                       grademarkscheck = 1.0;
                       aftermultiple = grademarks * widget.credit;
+                      oit.getresult();
                     });
                   },
-                  items: value.resultlist
+                  items: oit.resultlist
                       .map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
                       value: value,

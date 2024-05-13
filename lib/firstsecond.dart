@@ -142,19 +142,20 @@ class _firstsecondState extends State<firstsecond> {
       width: 150,
       child: ElevatedButton(
         onPressed: () {
-          if (ooop.grademarkscheck == 1 &&
-              odbms.grademarkscheck == 1 &&
-              opm.grademarkscheck == 1 &&
-              opcn.grademarkscheck == 1 &&
-              omathc.grademarkscheck == 1 &&
-              oelec.grademarkscheck == 1) {
+          if (ooopDropdownService.grademarkscheck == 1 &&
+              odbmsDropdownService.grademarkscheck == 1 &&
+              opmDropdownService.grademarkscheck == 1 &&
+              opcnDropdownService.grademarkscheck == 1 &&
+              omathcDropdownService.grademarkscheck == 1 &&
+              oelecDropdownService.grademarkscheck == 1) {
             setState(() {
-              double ooopgpa = ooop.aftermultiple;
-              double odbmsgpa = odbms.aftermultiple;
-              double opmgpa = opm.aftermultiple;
-              double opcgpa = opcn.aftermultiple;
-              double omathcgpa = omathc.aftermultiple;
-              double oelecgpa = oelec.aftermultiple;
+              double ooopgpa = ooopDropdownService.aftermultiple;
+              double odbmsgpa = odbmsDropdownService.aftermultiple;
+              double opmgpa = opmDropdownService.aftermultiple;
+              double opcgpa = opcnDropdownService.aftermultiple;
+              double omathcgpa = omathcDropdownService.aftermultiple;
+              double oelecgpa = oelecDropdownService.aftermultiple;
+
               double finalo2gpa = (ooopgpa +
                       odbmsgpa +
                       opmgpa +
@@ -165,6 +166,7 @@ class _firstsecondState extends State<firstsecond> {
 
               String formattedValue = finalo2gpa.toStringAsFixed(decimalPlaces);
               finalre = formattedValue;
+              print(finalo2gpa);
             });
           } else {
             showDialog(

@@ -29,6 +29,7 @@ class Dropdownservice extends ChangeNotifier {
   ];
   var selectedresult;
   double grademarkscheck = 0.0;
+  double grademarks = 0.0;
 
   setresultvalue(value) {
     selectedresult = value;
@@ -41,6 +42,14 @@ class Dropdownservice extends ChangeNotifier {
 
   viewgrademarkscheck() {
     print(grademarkscheck);
+  }
+
+  setgrademarks(marks) {
+    grademarks = marks;
+  }
+
+  viewgrademarks() {
+    print(grademarks);
   }
 
   getresult() {

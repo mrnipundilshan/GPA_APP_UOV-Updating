@@ -69,38 +69,49 @@ class SubjectState extends State<Subject> {
                     setState(() {
                       widget.dropdownService.setresultvalue(newValue);
                       widget.dropdownService.setgrademarkscheck();
+
                       if (dropdownValue == "A+ / A") {
-                        grademarks = 4.0;
+                        widget.dropdownService.setgrademarks(4.0);
                       }
+
                       if (dropdownValue == "A-") {
-                        grademarks = 3.7;
+                        widget.dropdownService.setgrademarks(3.7);
                       }
+
                       if (dropdownValue == "B+") {
-                        grademarks = 3.3;
+                        widget.dropdownService.setgrademarks(3.3);
                       }
+
                       if (dropdownValue == "B") {
-                        grademarks = 3.0;
+                        widget.dropdownService.setgrademarks(3.0);
                       }
+
                       if (dropdownValue == "B-") {
-                        grademarks = 2.7;
+                        widget.dropdownService.setgrademarks(2.7);
                       }
+
                       if (dropdownValue == "C+") {
-                        grademarks = 2.3;
+                        widget.dropdownService.setgrademarks(2.3);
                       }
+
                       if (dropdownValue == "C") {
-                        grademarks = 2.0;
+                        widget.dropdownService.setgrademarks(2.0);
                       }
+
                       if (dropdownValue == "C-") {
-                        grademarks = 1.7;
+                        widget.dropdownService.setgrademarks(1.7);
                       }
+
                       if (dropdownValue == "D+") {
-                        grademarks = 1.3;
+                        widget.dropdownService.setgrademarks(1.3);
                       }
+
                       if (dropdownValue == "D") {
-                        grademarks = 1.0;
+                        widget.dropdownService.setgrademarks(1.0);
                       }
+
                       if (dropdownValue == "E") {
-                        grademarks = 0.0;
+                        widget.dropdownService.setgrademarks(0.0);
                       }
 
                       aftermultiple = grademarks * widget.credit;

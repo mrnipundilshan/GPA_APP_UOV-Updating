@@ -98,14 +98,7 @@ class _firstfirstState extends State<firstfirst> {
             children: [
               button2(context),
               ElevatedButton(
-                onPressed: () {
-                  oitDropdownService.getresult();
-                  omathsDropdownService.getresult();
-                  print(oitDropdownService.grademarkscheck);
-                  // print(omaths.dropdownValue);
-                  // print(oit.grademarkscheck);
-                  // print(omaths.grademarkscheck);
-                },
+                onPressed: () {},
                 child: Text('check'),
               ),
               ElevatedButton(

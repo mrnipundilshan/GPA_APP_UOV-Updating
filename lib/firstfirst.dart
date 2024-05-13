@@ -49,7 +49,7 @@ class _firstfirstState extends State<firstfirst> {
             children: [
               Subject(
                 subname: "Fundamentals of Information Technology",
-                credit: 2,
+                credit: 3,
                 dropdownService: oitDropdownService,
                 onSubjectStateCreated: (subjectState) {
                   this.oit = subjectState;
@@ -65,7 +65,7 @@ class _firstfirstState extends State<firstfirst> {
               ),
               Subject(
                 subname: "Fundamentals of Programming",
-                credit: 2,
+                credit: 4,
                 dropdownService: oproDropdownService,
                 onSubjectStateCreated: (subjectState) {
                   this.opro = subjectState;
@@ -73,7 +73,7 @@ class _firstfirstState extends State<firstfirst> {
               ),
               Subject(
                 subname: "Fundamentals of Web Programming",
-                credit: 2,
+                credit: 4,
                 dropdownService: owebDropdownService,
                 onSubjectStateCreated: (subjectState) {
                   this.oweb = subjectState;
@@ -98,7 +98,13 @@ class _firstfirstState extends State<firstfirst> {
             children: [
               button2(context),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  print(oitDropdownService.aftermultiple);
+                  print(omathsDropdownService.aftermultiple);
+                  print(oproDropdownService.aftermultiple);
+                  print(owebDropdownService.aftermultiple);
+                  print(ostatDropdownService.aftermultiple);
+                },
                 child: Text('check'),
               ),
               ElevatedButton(
@@ -136,16 +142,17 @@ class _firstfirstState extends State<firstfirst> {
               owebDropdownService.grademarkscheck == 1 &&
               ostatDropdownService.grademarkscheck == 1) {
             setState(() {
-              double oitgpa = oit.aftermultiple;
-              double mathsgpa = omaths.aftermultiple;
-              double oprogpa = opro.aftermultiple;
-              double owebgpa = oweb.aftermultiple;
-              double ostatgpa = ostat.aftermultiple;
+              double oitgpa = oitDropdownService.aftermultiple;
+              double mathsgpa = omathsDropdownService.aftermultiple;
+              double oprogpa = oproDropdownService.aftermultiple;
+              double owebgpa = owebDropdownService.aftermultiple;
+              double ostatgpa = ostatDropdownService.aftermultiple;
               double finalo1gpa =
                   (oitgpa + mathsgpa + oprogpa + owebgpa + ostatgpa) / 15;
 
               String formattedValue = finalo1gpa.toStringAsFixed(decimalPlaces);
               finalre = formattedValue;
+              print(finalo1gpa);
             });
           } else {
             showDialog(
@@ -187,7 +194,7 @@ class _firstfirstState extends State<firstfirst> {
               ),
             );
           }
-          //print(finalo1gpa);
+
           print("pressed");
         },
         style: ElevatedButton.styleFrom(

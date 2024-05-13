@@ -30,6 +30,7 @@ class Dropdownservice extends ChangeNotifier {
   var selectedresult;
   double grademarkscheck = 0.0;
   double grademarks = 0.0;
+  double aftermultiple = 0.0;
 
   setresultvalue(value) {
     selectedresult = value;

@@ -114,7 +114,8 @@ class SubjectState extends State<Subject> {
                         widget.dropdownService.setgrademarks(0.0);
                       }
 
-                      aftermultiple = grademarks * widget.credit;
+                      widget.dropdownService.aftermultiple =
+                          widget.dropdownService.grademarks * widget.credit;
                     });
                   },
                   items: widget.dropdownService.resultlist

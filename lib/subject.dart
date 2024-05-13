@@ -67,9 +67,8 @@ class SubjectState extends State<Subject> {
                   onChanged: (String? newValue) {
                     String? dropdownValue = newValue;
                     setState(() {
-                      print(widget.subname);
                       widget.dropdownService.setresultvalue(newValue);
-                      widget.dropdownService.getresult();
+                      widget.dropdownService.setgrademarkscheck();
                       if (dropdownValue == "A+ / A") {
                         grademarks = 4.0;
                       }
@@ -104,7 +103,6 @@ class SubjectState extends State<Subject> {
                         grademarks = 0.0;
                       }
 
-                      grademarkscheck = 1.0;
                       aftermultiple = grademarks * widget.credit;
                     });
                   },

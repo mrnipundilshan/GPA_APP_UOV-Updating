@@ -28,10 +28,19 @@ class Dropdownservice extends ChangeNotifier {
     'E'
   ];
   var selectedresult;
+  double grademarkscheck = 0.0;
 
   setresultvalue(value) {
     selectedresult = value;
     notifyListeners();
+  }
+
+  setgrademarkscheck() {
+    grademarkscheck = 1.0;
+  }
+
+  viewgrademarkscheck() {
+    print(grademarkscheck);
   }
 
   getresult() {

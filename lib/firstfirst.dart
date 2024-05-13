@@ -101,7 +101,7 @@ class _firstfirstState extends State<firstfirst> {
                 onPressed: () {
                   oitDropdownService.getresult();
                   omathsDropdownService.getresult();
-                  //print(ostatDropdownService.selectedresult);
+                  print(oitDropdownService.grademarkscheck);
                   // print(omaths.dropdownValue);
                   // print(oit.grademarkscheck);
                   // print(omaths.grademarkscheck);
@@ -137,11 +137,11 @@ class _firstfirstState extends State<firstfirst> {
       width: 150,
       child: ElevatedButton(
         onPressed: () {
-          if (oit.grademarkscheck == 1 &&
-              omaths.grademarkscheck == 1 &&
-              opro.grademarkscheck == 1 &&
-              oweb.grademarkscheck == 1 &&
-              ostat.grademarkscheck == 1) {
+          if (oitDropdownService.grademarkscheck == 1 &&
+              omathsDropdownService.grademarkscheck == 1 &&
+              oproDropdownService.grademarkscheck == 1 &&
+              owebDropdownService.grademarkscheck == 1 &&
+              ostatDropdownService.grademarkscheck == 1) {
             setState(() {
               double oitgpa = oit.aftermultiple;
               double mathsgpa = omaths.aftermultiple;

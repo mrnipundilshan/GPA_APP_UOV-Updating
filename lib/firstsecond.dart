@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:newgpa/firstsecond.dart';
+import 'package:newgpa/firstfirst.dart';
 import 'package:newgpa/provider.dart';
 import 'subject.dart';
 
-class firstfirst extends StatefulWidget {
-  const firstfirst({Key? key}) : super(key: key);
+class firstsecond extends StatefulWidget {
+  const firstsecond({Key? key}) : super(key: key);
 
   @override
-  State<firstfirst> createState() => _firstfirstState();
+  State<firstsecond> createState() => _firstsecondState();
 }
 
-class _firstfirstState extends State<firstfirst> {
+class _firstsecondState extends State<firstsecond> {
   // Create separate instances of Dropdownservice
 
   String finalre = "--";
   int decimalPlaces = 4;
 
-  late SubjectState oit;
-  late SubjectState omaths;
-  late SubjectState opro;
-  late SubjectState oweb;
-  late SubjectState ostat;
+  late SubjectState ooop;
+  late SubjectState odbms;
+  late SubjectState opm;
+  late SubjectState opcn;
+  late SubjectState oelec;
+  late SubjectState omathc;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class _firstfirstState extends State<firstfirst> {
           backgroundColor: const Color.fromARGB(255, 94, 167, 88),
           centerTitle: true,
           title: const Text(
-            "1ST YEAR 1ST SEMESTER",
+            "1ST YEAR 2ND SEMESTER",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
@@ -48,44 +49,52 @@ class _firstfirstState extends State<firstfirst> {
             //scrollDirection: Axis.vertical,
             children: [
               Subject(
-                subname: "Fundamentals of Information Technology",
-                credit: 2,
-                dropdownService: oitDropdownService,
+                subname: "Object Oriented Design and Programming",
+                credit: 4,
                 onSubjectStateCreated: (subjectState) {
-                  this.oit = subjectState;
+                  this.ooop = subjectState;
                 },
+                dropdownService: ooopDropdownService,
               ),
               Subject(
-                subname: "Foundation of Mathematics",
-                credit: 2,
-                dropdownService: omathsDropdownService,
+                subname: "Database Management Systems",
+                credit: 3,
                 onSubjectStateCreated: (subjectState) {
-                  this.omaths = subjectState;
+                  this.odbms = subjectState;
                 },
+                dropdownService: odbmsDropdownService,
               ),
               Subject(
-                subname: "Fundamentals of Programming",
+                subname: "Project Management",
                 credit: 2,
-                dropdownService: oproDropdownService,
                 onSubjectStateCreated: (subjectState) {
-                  this.opro = subjectState;
+                  this.opm = subjectState;
                 },
+                dropdownService: opmDropdownService,
               ),
               Subject(
-                subname: "Fundamentals of Web Programming",
+                subname: "Principles of Computer Networks",
                 credit: 2,
-                dropdownService: owebDropdownService,
                 onSubjectStateCreated: (subjectState) {
-                  this.oweb = subjectState;
+                  this.opcn = subjectState;
                 },
+                dropdownService: opcnDropdownService,
               ),
               Subject(
-                subname: "Essentials of Statistics",
+                subname: "Electronics and Device Interfacing",
                 credit: 2,
-                dropdownService: ostatDropdownService,
                 onSubjectStateCreated: (subjectState) {
-                  this.ostat = subjectState;
+                  this.oelec = subjectState;
                 },
+                dropdownService: oelecDropdownService,
+              ),
+              Subject(
+                subname: "Mathematics for Computing",
+                credit: 2,
+                onSubjectStateCreated: (subjectState) {
+                  this.omathc = subjectState;
+                },
+                dropdownService: omathcDropdownService,
               ),
             ],
           ),
@@ -96,25 +105,13 @@ class _firstfirstState extends State<firstfirst> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              button2(context),
-              ElevatedButton(
-                onPressed: () {
-                  oitDropdownService.getresult();
-                  omathsDropdownService.getresult();
-                  //print(ostatDropdownService.selectedresult);
-                  // print(omaths.dropdownValue);
-                  // print(oit.grademarkscheck);
-                  // print(omaths.grademarkscheck);
-                },
-                child: Text('check'),
-              ),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     PageRouteBuilder(
                       pageBuilder: (context, animation, secondaryAnimation) =>
-                          firstsecond(),
+                          firstfirst(),
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) {
                         return child;
@@ -122,6 +119,14 @@ class _firstfirstState extends State<firstfirst> {
                     ),
                   );
                 },
+                child: Text('Previous Sem'),
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('Get GPA'),
+              ),
+              ElevatedButton(
+                onPressed: () {},
                 child: Text('Next Sem'),
               ),
             ],
@@ -137,21 +142,28 @@ class _firstfirstState extends State<firstfirst> {
       width: 150,
       child: ElevatedButton(
         onPressed: () {
-          if (oit.grademarkscheck == 1 &&
-              omaths.grademarkscheck == 1 &&
-              opro.grademarkscheck == 1 &&
-              oweb.grademarkscheck == 1 &&
-              ostat.grademarkscheck == 1) {
+          if (ooop.grademarkscheck == 1 &&
+              odbms.grademarkscheck == 1 &&
+              opm.grademarkscheck == 1 &&
+              opcn.grademarkscheck == 1 &&
+              omathc.grademarkscheck == 1 &&
+              oelec.grademarkscheck == 1) {
             setState(() {
-              double oitgpa = oit.aftermultiple;
-              double mathsgpa = omaths.aftermultiple;
-              double oprogpa = opro.aftermultiple;
-              double owebgpa = oweb.aftermultiple;
-              double ostatgpa = ostat.aftermultiple;
-              double finalo1gpa =
-                  (oitgpa + mathsgpa + oprogpa + owebgpa + ostatgpa) / 15;
+              double ooopgpa = ooop.aftermultiple;
+              double odbmsgpa = odbms.aftermultiple;
+              double opmgpa = opm.aftermultiple;
+              double opcgpa = opcn.aftermultiple;
+              double omathcgpa = omathc.aftermultiple;
+              double oelecgpa = oelec.aftermultiple;
+              double finalo2gpa = (ooopgpa +
+                      odbmsgpa +
+                      opmgpa +
+                      opcgpa +
+                      omathcgpa +
+                      oelecgpa) /
+                  15;
 
-              String formattedValue = finalo1gpa.toStringAsFixed(decimalPlaces);
+              String formattedValue = finalo2gpa.toStringAsFixed(decimalPlaces);
               finalre = formattedValue;
             });
           } else {
@@ -194,7 +206,6 @@ class _firstfirstState extends State<firstfirst> {
               ),
             );
           }
-          //print(finalo1gpa);
           print("pressed");
         },
         style: ElevatedButton.styleFrom(

@@ -61,12 +61,14 @@ class SubjectState extends State<Subject> {
                 style: const TextStyle(fontSize: 18.0),
               ),
               Consumer<Dropdownservice>(
-                builder: (context, dr, child) => DropdownButton<String>(
+                builder: (context, dropdownService, child) =>
+                    DropdownButton<String>(
                   value: widget.dropdownService.selectedresult,
                   onChanged: (String? newValue) {
                     String? dropdownValue = newValue;
                     setState(() {
-                      widget.dropdownService.selectedresult = newValue;
+                      print(widget.subname);
+                      widget.dropdownService.setresultvalue(newValue);
                       widget.dropdownService.getresult();
                       if (dropdownValue == "A+ / A") {
                         grademarks = 4.0;

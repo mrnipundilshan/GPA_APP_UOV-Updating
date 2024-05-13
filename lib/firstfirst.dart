@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:newgpa/firstsecond.dart';
 import 'package:newgpa/provider.dart';
+import 'package:newgpa/test.dart';
 import 'subject.dart';
 
 class firstfirst extends StatefulWidget {
@@ -104,8 +104,8 @@ class _firstfirstState extends State<firstfirst> {
               button2(context),
               ElevatedButton(
                 onPressed: () {
-                  print(oitDropdownService.selectedresult);
-                  print(omathsDropdownService.selectedresult);
+                  oitDropdownService.getresult();
+                  omathsDropdownService.getresult();
                   // print(omaths.dropdownValue);
                   // print(oit.grademarkscheck);
                   // print(omaths.grademarkscheck);
@@ -118,7 +118,7 @@ class _firstfirstState extends State<firstfirst> {
                     context,
                     PageRouteBuilder(
                       pageBuilder: (context, animation, secondaryAnimation) =>
-                          firstsecond(),
+                          test(),
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) {
                         return child;

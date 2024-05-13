@@ -33,18 +33,7 @@ class SubjectState extends State<Subject> {
   double aftermultiple = 0.0;
 
   @override
-  void initState() {
-    super.initState();
-    // Retrieve initial value from Provider
-    final dropdownService =
-        Provider.of<Dropdownservice>(context, listen: false);
-    widget.dropdownService.setresultvalue(dropdownService.selectedresult);
-  }
-
-  @override
-  Widget build(
-    BuildContext context,
-  ) {
+  Widget build(BuildContext context) {
     return Container(
       height: 100.0,
       width: 380,
@@ -72,7 +61,7 @@ class SubjectState extends State<Subject> {
                 style: const TextStyle(fontSize: 18.0),
               ),
               Consumer<Dropdownservice>(
-                builder: (context, d, child) => DropdownButton<String>(
+                builder: (context, dr, child) => DropdownButton<String>(
                   value: widget.dropdownService.selectedresult,
                   onChanged: (String? newValue) {
                     String? dropdownValue = newValue;

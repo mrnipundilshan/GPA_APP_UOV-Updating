@@ -28,10 +28,6 @@ class Subject extends StatefulWidget {
 }
 
 class SubjectState extends State<Subject> {
-  double grademarks = 0.0;
-  double grademarkscheck = 0.0;
-  double aftermultiple = 0.0;
-
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -121,10 +121,7 @@ class _firstsecondState extends State<firstsecond> {
                 },
                 child: Text('Previous Sem'),
               ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('Get GPA'),
-              ),
+              button2(context),
               ElevatedButton(
                 onPressed: () {},
                 child: Text('Next Sem'),

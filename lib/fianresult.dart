@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newgpa/firstsecond.dart';
+import 'package:newgpa/firstfirst.dart';
 
 class finalrseult extends StatefulWidget {
   const finalrseult({Key? key}) : super(key: key);
@@ -50,7 +50,7 @@ class _finalrseultState extends State<finalrseult> {
                     context,
                     PageRouteBuilder(
                       pageBuilder: (context, animation, secondaryAnimation) =>
-                          firstsecond(),
+                          firstfirst(),
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) {
                         return child;
@@ -58,7 +58,7 @@ class _finalrseultState extends State<finalrseult> {
                     ),
                   );
                 },
-                child: Text('Next Sem'),
+                child: Text('Back'),
               ),
             ],
           ),

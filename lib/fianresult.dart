@@ -46,9 +46,9 @@ class _finalresultState extends State<finalresult> {
               child: Column(
                 children: [
                   const SizedBox(height: 15),
-                  Text(
+                  const Text(
                     "1st Year",
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontSize: 19.2,
                         color: Colors.white,
                         fontWeight: FontWeight.w500),
@@ -59,7 +59,7 @@ class _finalresultState extends State<finalresult> {
                     children: [
                       Column(
                         children: [
-                          Text(
+                          const Text(
                             "1st semester",
                             style: const TextStyle(fontSize: 18.0),
                           ),
@@ -71,12 +71,12 @@ class _finalresultState extends State<finalresult> {
                       ),
                       Column(
                         children: [
-                          Text(
+                          const Text(
                             "2nd semester",
                             style: const TextStyle(fontSize: 18.0),
                           ),
                           Text(
-                            "GPA value",
+                            "${onetwoDropdownService.semfinaldouble}",
                             style: const TextStyle(fontSize: 18.0),
                           ),
                         ],

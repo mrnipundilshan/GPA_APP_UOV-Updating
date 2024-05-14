@@ -34,6 +34,7 @@ class _checkresultState extends State<checkresult> {
 
               String formattedValue = finalo1gpa.toStringAsFixed(decimalPlaces);
               oneoneDropdownService.setsemfinaldouble(formattedValue);
+              oneoneDropdownService.setsemfinalnotformattedgpa(finalo1gpa);
             });
           }
 
@@ -61,10 +62,21 @@ class _checkresultState extends State<checkresult> {
 
               String formattedValue = finalo2gpa.toStringAsFixed(decimalPlaces);
               onetwoDropdownService.setsemfinaldouble(formattedValue);
-
-              print(finalo2gpa);
+              onetwoDropdownService.setsemfinalnotformattedgpa(finalo2gpa);
             });
           }
+
+          Navigator.push(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  finalresult(),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                return child;
+              },
+            ),
+          );
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.green, // Background color

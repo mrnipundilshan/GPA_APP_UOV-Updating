@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newgpa/checkgpa.dart';
 import 'package:newgpa/firstfirst.dart';
 import 'package:newgpa/provider.dart';
 import 'subject.dart';
@@ -121,6 +122,7 @@ class _firstsecondState extends State<firstsecond> {
                 },
                 child: Text('Previous Sem'),
               ),
+              checkresult(),
               ElevatedButton(
                 onPressed: () {},
                 child: Text('Next Sem'),

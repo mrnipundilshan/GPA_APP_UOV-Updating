@@ -92,10 +92,6 @@ class _firstfirstState extends State<firstfirst> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('check'),
-              ),
               checkresult(),
               ElevatedButton(
                 onPressed: () {

@@ -36,7 +36,7 @@ class Dropdownservice extends ChangeNotifier {
   double grademarks = 0.0;
   double aftermultiple = 0.0;
   String semfinaldouble = "-";
-  String oneonegpa = "-";
+  double semfinalnotformattedgpa = 0.0;
 
   setresultvalue(value) {
     selectedresult = value;
@@ -63,8 +63,8 @@ class Dropdownservice extends ChangeNotifier {
     print(selectedresult);
   }
 
-  setoneonegpa(value) {
-    oneonegpa = value;
+  setsemfinalnotformattedgpa(value) {
+    semfinalnotformattedgpa = value;
     notifyListeners();
   }
 

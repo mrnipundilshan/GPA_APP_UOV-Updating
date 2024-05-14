@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newgpa/fianresult.dart';
 import 'package:newgpa/firstsecond.dart';
 import 'package:newgpa/provider.dart';
 import 'subject.dart';
@@ -99,11 +100,17 @@ class _firstfirstState extends State<firstfirst> {
               button2(context),
               ElevatedButton(
                 onPressed: () {
-                  print(oitDropdownService.aftermultiple);
-                  print(omathsDropdownService.aftermultiple);
-                  print(oproDropdownService.aftermultiple);
-                  print(owebDropdownService.aftermultiple);
-                  print(ostatDropdownService.aftermultiple);
+                  Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          finalrseult(),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                        return child;
+                      },
+                    ),
+                  );
                 },
                 child: Text('check'),
               ),

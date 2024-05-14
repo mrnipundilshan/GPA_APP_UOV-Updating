@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:newgpa/firstfirst.dart';
 
-class finalrseult extends StatefulWidget {
-  const finalrseult({Key? key}) : super(key: key);
+class finalresult extends StatefulWidget {
+  const finalresult({Key? key}) : super(key: key);
 
   @override
-  State<finalrseult> createState() => _finalrseultState();
+  State<finalresult> createState() => _finalresultState();
 }
 
-class _finalrseultState extends State<finalrseult> {
+class _finalresultState extends State<finalresult> {
   // Create separate instances of Dropdownservice
 
   @override

@@ -33,8 +33,7 @@ class _checkresultState extends State<checkresult> {
                   (oitgpa + mathsgpa + oprogpa + owebgpa + ostatgpa) / 15;
 
               String formattedValue = finalo1gpa.toStringAsFixed(decimalPlaces);
-              String finalre = formattedValue;
-              print(finalo1gpa);
+              oneoneDropdownService.setoneonegpadouble(formattedValue);
             });
 
             Navigator.push(

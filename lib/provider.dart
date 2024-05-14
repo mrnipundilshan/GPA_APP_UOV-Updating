@@ -6,6 +6,8 @@ final Dropdownservice oproDropdownService = Dropdownservice();
 final Dropdownservice owebDropdownService = Dropdownservice();
 final Dropdownservice ostatDropdownService = Dropdownservice();
 
+final Dropdownservice oneoneDropdownService = Dropdownservice();
+
 final Dropdownservice ooopDropdownService = Dropdownservice();
 final Dropdownservice odbmsDropdownService = Dropdownservice();
 final Dropdownservice opmDropdownService = Dropdownservice();
@@ -31,6 +33,8 @@ class Dropdownservice extends ChangeNotifier {
   double grademarkscheck = 0.0;
   double grademarks = 0.0;
   double aftermultiple = 0.0;
+  String oneonegpadouble = "-";
+  String oneonegpa = "-";
 
   setresultvalue(value) {
     selectedresult = value;
@@ -55,5 +59,15 @@ class Dropdownservice extends ChangeNotifier {
 
   getresult() {
     print(selectedresult);
+  }
+
+  setoneonegpa(value) {
+    oneonegpa = value;
+    notifyListeners();
+  }
+
+  setoneonegpadouble(value) {
+    oneonegpadouble = value;
+    notifyListeners();
   }
 }

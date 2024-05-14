@@ -99,17 +99,63 @@ class _firstfirstState extends State<firstfirst> {
               checkresult(),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) =>
-                          firstsecond(),
-                      transitionsBuilder:
-                          (context, animation, secondaryAnimation, child) {
-                        return child;
-                      },
-                    ),
-                  );
+                  if (oitDropdownService.grademarkscheck == 1 &&
+                      omathsDropdownService.grademarkscheck == 1 &&
+                      oproDropdownService.grademarkscheck == 1 &&
+                      owebDropdownService.grademarkscheck == 1 &&
+                      ostatDropdownService.grademarkscheck == 1) {
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) =>
+                            firstsecond(),
+                        transitionsBuilder:
+                            (context, animation, secondaryAnimation, child) {
+                          return child;
+                        },
+                      ),
+                    );
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (ctx) => AlertDialog(
+                        backgroundColor: Color.fromARGB(255, 7, 70, 21),
+                        title: const Text(
+                          "Alert",
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(fontSize: 30.0),
+                        ),
+                        content: const Text(
+                          "Fill all subjects results",
+                          textAlign: TextAlign.center,
+                        ),
+                        actions: <Widget>[
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(ctx).pop();
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              padding: const EdgeInsets.all(10),
+                              decoration: const BoxDecoration(
+                                color: Color.fromARGB(255, 94, 167, 88),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(16)),
+                              ),
+                              child: const Text(
+                                "OK",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 30.0,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }
                 },
                 child: Text('Next Sem'),
               ),

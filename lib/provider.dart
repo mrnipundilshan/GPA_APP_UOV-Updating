@@ -15,6 +15,8 @@ final Dropdownservice opcnDropdownService = Dropdownservice();
 final Dropdownservice oelecDropdownService = Dropdownservice();
 final Dropdownservice omathcDropdownService = Dropdownservice();
 
+final Dropdownservice onetwoDropdownService = Dropdownservice();
+
 class Dropdownservice extends ChangeNotifier {
   var resultlist = [
     'A+ / A',
@@ -33,7 +35,7 @@ class Dropdownservice extends ChangeNotifier {
   double grademarkscheck = 0.0;
   double grademarks = 0.0;
   double aftermultiple = 0.0;
-  String oneonegpadouble = "-";
+  String semfinaldouble = "-";
   String oneonegpa = "-";
 
   setresultvalue(value) {
@@ -66,8 +68,8 @@ class Dropdownservice extends ChangeNotifier {
     notifyListeners();
   }
 
-  setoneonegpadouble(value) {
-    oneonegpadouble = value;
+  setsemfinaldouble(value) {
+    semfinaldouble = value;
     notifyListeners();
   }
 }

@@ -121,98 +121,12 @@ class _firstsecondState extends State<firstsecond> {
                 },
                 child: Text('Previous Sem'),
               ),
-              button2(context),
               ElevatedButton(
                 onPressed: () {},
                 child: Text('Next Sem'),
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-
-  Container button2(BuildContext context) {
-    return Container(
-      height: 40,
-      width: 150,
-      child: ElevatedButton(
-        onPressed: () {
-          if (ooopDropdownService.grademarkscheck == 1 &&
-              odbmsDropdownService.grademarkscheck == 1 &&
-              opmDropdownService.grademarkscheck == 1 &&
-              opcnDropdownService.grademarkscheck == 1 &&
-              omathcDropdownService.grademarkscheck == 1 &&
-              oelecDropdownService.grademarkscheck == 1) {
-            setState(() {
-              double ooopgpa = ooopDropdownService.aftermultiple;
-              double odbmsgpa = odbmsDropdownService.aftermultiple;
-              double opmgpa = opmDropdownService.aftermultiple;
-              double opcgpa = opcnDropdownService.aftermultiple;
-              double omathcgpa = omathcDropdownService.aftermultiple;
-              double oelecgpa = oelecDropdownService.aftermultiple;
-
-              double finalo2gpa = (ooopgpa +
-                      odbmsgpa +
-                      opmgpa +
-                      opcgpa +
-                      omathcgpa +
-                      oelecgpa) /
-                  15;
-
-              String formattedValue = finalo2gpa.toStringAsFixed(decimalPlaces);
-              finalre = formattedValue;
-              print(finalo2gpa);
-            });
-          } else {
-            showDialog(
-              context: context,
-              builder: (ctx) => AlertDialog(
-                backgroundColor: Color.fromARGB(255, 7, 70, 21),
-                title: const Text(
-                  "Alert",
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 30.0),
-                ),
-                content: const Text(
-                  "Fill all subjects results",
-                  textAlign: TextAlign.center,
-                ),
-                actions: <Widget>[
-                  TextButton(
-                    onPressed: () {
-                      Navigator.of(ctx).pop();
-                    },
-                    child: Container(
-                      alignment: Alignment.center,
-                      padding: const EdgeInsets.all(10),
-                      decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 94, 167, 88),
-                        borderRadius: BorderRadius.all(Radius.circular(16)),
-                      ),
-                      child: const Text(
-                        "OK",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            );
-          }
-          print("pressed");
-        },
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.green, // Background color
-        ),
-        child: const Text(
-          'View GPA',
-          style: TextStyle(fontSize: 19),
         ),
       ),
     );

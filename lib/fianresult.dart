@@ -64,7 +64,7 @@ class _finalresultState extends State<finalresult> {
                             style: const TextStyle(fontSize: 18.0),
                           ),
                           Text(
-                            "${oneoneDropdownService.oneonegpadouble}",
+                            "${oneoneDropdownService.semfinaldouble}",
                             style: const TextStyle(fontSize: 18.0),
                           ),
                         ],

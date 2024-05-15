@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newgpa/checkgpa.dart';
-import 'package:newgpa/firstfirst.dart';
 import 'package:newgpa/provider.dart';
+import 'package:newgpa/secondone.dart';
 import 'subject.dart';
 
 class firstsecond extends StatefulWidget {
@@ -17,12 +17,11 @@ class _firstsecondState extends State<firstsecond> {
   String finalre = "--";
   int decimalPlaces = 4;
 
-  late SubjectState ooop;
-  late SubjectState odbms;
-  late SubjectState opm;
-  late SubjectState opcn;
-  late SubjectState oelec;
-  late SubjectState omathc;
+  late SubjectState smis;
+  late SubjectState sda;
+  late SubjectState sws;
+  late SubjectState sos;
+  late SubjectState ssp;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +33,7 @@ class _firstsecondState extends State<firstsecond> {
           backgroundColor: const Color.fromARGB(255, 94, 167, 88),
           centerTitle: true,
           title: const Text(
-            "1ST YEAR 2ND SEMESTER",
+            "2ND YEAR 2ND SEMESTER",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
@@ -50,52 +49,44 @@ class _firstsecondState extends State<firstsecond> {
             //scrollDirection: Axis.vertical,
             children: [
               Subject(
-                subname: "Object Oriented Design and Programming",
-                credit: 4,
+                subname: "Management Information Systems",
+                credit: 2,
                 onSubjectStateCreated: (subjectState) {
-                  this.ooop = subjectState;
+                  this.smis = subjectState;
                 },
-                dropdownService: ooopDropdownService,
+                dropdownService: smisDropdownService,
               ),
               Subject(
-                subname: "Database Management Systems",
+                subname: "Design and Analysis of Algorithms",
                 credit: 3,
                 onSubjectStateCreated: (subjectState) {
-                  this.odbms = subjectState;
+                  this.sda = subjectState;
                 },
-                dropdownService: odbmsDropdownService,
+                dropdownService: sdaDropdownService,
               ),
               Subject(
-                subname: "Project Management",
-                credit: 2,
+                subname: "Web Services and Server Technologies",
+                credit: 4,
                 onSubjectStateCreated: (subjectState) {
-                  this.opm = subjectState;
+                  this.sws = subjectState;
                 },
-                dropdownService: opmDropdownService,
+                dropdownService: swsDropdownService,
               ),
               Subject(
-                subname: "Principles of Computer Networks",
-                credit: 2,
+                subname: "Operating Systems",
+                credit: 4,
                 onSubjectStateCreated: (subjectState) {
-                  this.opcn = subjectState;
+                  this.sos = subjectState;
                 },
-                dropdownService: opcnDropdownService,
+                dropdownService: sosDropdownService,
               ),
               Subject(
-                subname: "Electronics and Device Interfacing",
+                subname: "Social and Professional Issues in IT",
                 credit: 2,
                 onSubjectStateCreated: (subjectState) {
-                  this.oelec = subjectState;
+                  this.ssp = subjectState;
                 },
-                dropdownService: oelecDropdownService,
-              ),
-              Subject(
-                subname: "Mathematics for Computing",
-                credit: 2,
-                onSubjectStateCreated: (subjectState) {
-                  this.omathc = subjectState;
-                },
-                dropdownService: omathcDropdownService,
+                dropdownService: sspDropdownService,
               ),
             ],
           ),
@@ -116,7 +107,7 @@ class _firstsecondState extends State<firstsecond> {
                     context,
                     PageRouteBuilder(
                       pageBuilder: (context, animation, secondaryAnimation) =>
-                          firstfirst(),
+                          secondone(),
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) {
                         return child;
@@ -138,12 +129,11 @@ class _firstsecondState extends State<firstsecond> {
                       Color.fromARGB(255, 0, 70, 0), // Background color
                 ),
                 onPressed: () {
-                  if (ooopDropdownService.grademarkscheck == 1 &&
-                      odbmsDropdownService.grademarkscheck == 1 &&
-                      opmDropdownService.grademarkscheck == 1 &&
-                      opcnDropdownService.grademarkscheck == 1 &&
-                      omathcDropdownService.grademarkscheck == 1 &&
-                      oelecDropdownService.grademarkscheck == 1) {
+                  if (smisDropdownService.grademarkscheck == 1 &&
+                      sdaDropdownService.grademarkscheck == 1 &&
+                      swsDropdownService.grademarkscheck == 1 &&
+                      sosDropdownService.grademarkscheck == 1 &&
+                      sspDropdownService.grademarkscheck == 1) {
                     Navigator.push(
                       context,
                       PageRouteBuilder(

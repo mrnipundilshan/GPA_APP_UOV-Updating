@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:newgpa/checkgpa.dart';
-import 'package:newgpa/firstfirst.dart';
 import 'package:newgpa/firstsecond.dart';
 import 'package:newgpa/provider.dart';
 import 'subject.dart';

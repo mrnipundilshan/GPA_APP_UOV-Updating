@@ -17,6 +17,14 @@ final Dropdownservice omathcDropdownService = Dropdownservice();
 
 final Dropdownservice onetwoDropdownService = Dropdownservice();
 
+final Dropdownservice sdsDropdownService = Dropdownservice();
+final Dropdownservice sseDropdownService = Dropdownservice();
+final Dropdownservice swpDropdownService = Dropdownservice();
+final Dropdownservice svpDropdownService = Dropdownservice();
+final Dropdownservice scgDropdownService = Dropdownservice();
+
+final Dropdownservice twooneDropdownService = Dropdownservice();
+
 class Dropdownservice extends ChangeNotifier {
   var resultlist = [
     'A+ / A',

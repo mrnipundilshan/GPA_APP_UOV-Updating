@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:newgpa/checkgpa.dart';
 import 'package:newgpa/firstfirst.dart';
 import 'package:newgpa/provider.dart';
+import 'package:newgpa/secondone.dart';
 import 'subject.dart';
 
 class firstsecond extends StatefulWidget {
@@ -148,11 +149,51 @@ class _firstsecondState extends State<firstsecond> {
                       context,
                       PageRouteBuilder(
                         pageBuilder: (context, animation, secondaryAnimation) =>
-                            firstsecond(),
+                            secondone(),
                         transitionsBuilder:
                             (context, animation, secondaryAnimation, child) {
                           return child;
                         },
+                      ),
+                    );
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (ctx) => AlertDialog(
+                        backgroundColor: Color.fromARGB(255, 7, 70, 21),
+                        title: const Text(
+                          "Alert",
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(fontSize: 30.0),
+                        ),
+                        content: const Text(
+                          "Fill all subjects results",
+                          textAlign: TextAlign.center,
+                        ),
+                        actions: <Widget>[
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(ctx).pop();
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              padding: const EdgeInsets.all(10),
+                              decoration: const BoxDecoration(
+                                color: Color.fromARGB(255, 94, 167, 88),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(16)),
+                              ),
+                              child: const Text(
+                                "OK",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 30.0,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     );
                   }

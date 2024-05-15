@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:newgpa/checkgpa.dart';
+import 'package:newgpa/firstsecond.dart';
 import 'package:newgpa/provider.dart';
 import 'package:newgpa/secondone.dart';
 import 'subject.dart';
 
-class firstsecond extends StatefulWidget {
-  const firstsecond({Key? key}) : super(key: key);
+class secondtwo extends StatefulWidget {
+  const secondtwo({Key? key}) : super(key: key);
 
   @override
-  State<firstsecond> createState() => _firstsecondState();
+  State<secondtwo> createState() => _secondtwoState();
 }
 
-class _firstsecondState extends State<firstsecond> {
+class _secondtwoState extends State<secondtwo> {
   // Create separate instances of Dropdownservice
 
   String finalre = "--";

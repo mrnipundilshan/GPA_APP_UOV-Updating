@@ -87,24 +87,24 @@ class _checkresultState extends State<checkresult> {
             });
           }
 
-          if (sdsDropdownService.grademarkscheck == 1 &&
-              sseDropdownService.grademarkscheck == 1 &&
-              swpDropdownService.grademarkscheck == 1 &&
-              svpDropdownService.grademarkscheck == 1 &&
-              scgDropdownService.grademarkscheck == 1) {
+          if (smisDropdownService.grademarkscheck == 1 &&
+              sdaDropdownService.grademarkscheck == 1 &&
+              swsDropdownService.grademarkscheck == 1 &&
+              sosDropdownService.grademarkscheck == 1 &&
+              sspDropdownService.grademarkscheck == 1) {
             setState(() {
-              double sdsgpa = sdsDropdownService.aftermultiple;
-              double ssegpa = sseDropdownService.aftermultiple;
-              double swpgpa = swpDropdownService.aftermultiple;
-              double svpgpa = svpDropdownService.aftermultiple;
-              double scgcgpa = scgDropdownService.aftermultiple;
+              double smisgpa = smisDropdownService.aftermultiple;
+              double sdagpa = sdaDropdownService.aftermultiple;
+              double swsgpa = swsDropdownService.aftermultiple;
+              double sosgpa = sosDropdownService.aftermultiple;
+              double sspgpa = sspDropdownService.aftermultiple;
 
-              double finals1gpa =
-                  (sdsgpa + ssegpa + swpgpa + svpgpa + scgcgpa) / 13;
+              double finals2gpa =
+                  (smisgpa + sdagpa + swsgpa + sosgpa + sspgpa) / 15;
 
-              String formattedValue = finals1gpa.toStringAsFixed(decimalPlaces);
-              twooneDropdownService.setsemfinaldouble(formattedValue);
-              twooneDropdownService.setsemfinalnotformattedgpa(finals1gpa);
+              String formattedValue = finals2gpa.toStringAsFixed(decimalPlaces);
+              twotwoDropdownService.setsemfinaldouble(formattedValue);
+              twotwoDropdownService.setsemfinalnotformattedgpa(finals2gpa);
             });
           }
 

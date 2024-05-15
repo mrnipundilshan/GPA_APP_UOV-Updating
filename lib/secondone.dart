@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:newgpa/checkgpa.dart';
 import 'package:newgpa/firstsecond.dart';
 import 'package:newgpa/provider.dart';
+import 'package:newgpa/secondtwo.dart';
 import 'subject.dart';
 
 class secondone extends StatefulWidget {
@@ -128,21 +129,60 @@ class _secondoneState extends State<secondone> {
                       Color.fromARGB(255, 0, 70, 0), // Background color
                 ),
                 onPressed: () {
-                  if (ooopDropdownService.grademarkscheck == 1 &&
-                      odbmsDropdownService.grademarkscheck == 1 &&
-                      opmDropdownService.grademarkscheck == 1 &&
-                      opcnDropdownService.grademarkscheck == 1 &&
-                      omathcDropdownService.grademarkscheck == 1 &&
-                      oelecDropdownService.grademarkscheck == 1) {
+                  if (sdsDropdownService.grademarkscheck == 1 &&
+                      sseDropdownService.grademarkscheck == 1 &&
+                      swpDropdownService.grademarkscheck == 1 &&
+                      svpDropdownService.grademarkscheck == 1 &&
+                      scgDropdownService.grademarkscheck == 1) {
                     Navigator.push(
                       context,
                       PageRouteBuilder(
                         pageBuilder: (context, animation, secondaryAnimation) =>
-                            firstsecond(),
+                            secondtwo(),
                         transitionsBuilder:
                             (context, animation, secondaryAnimation, child) {
                           return child;
                         },
+                      ),
+                    );
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (ctx) => AlertDialog(
+                        backgroundColor: Color.fromARGB(255, 7, 70, 21),
+                        title: const Text(
+                          "Alert",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 30.0),
+                        ),
+                        content: const Text(
+                          "Fill all subjects results",
+                          textAlign: TextAlign.center,
+                        ),
+                        actions: <Widget>[
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(ctx).pop();
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              padding: const EdgeInsets.all(10),
+                              decoration: const BoxDecoration(
+                                color: Color.fromARGB(255, 94, 167, 88),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(16)),
+                              ),
+                              child: const Text(
+                                "OK",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 30.0,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     );
                   }

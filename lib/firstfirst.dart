@@ -33,7 +33,7 @@ class _firstfirstState extends State<firstfirst> {
           ),
         ),
         body: Container(
-          padding: EdgeInsets.all(13),
+          padding: const EdgeInsets.all(13),
           width: 420,
           decoration: const BoxDecoration(
               color: Color.fromARGB(255, 38, 46, 37),
@@ -83,10 +83,18 @@ class _firstfirstState extends State<firstfirst> {
                   this.ostat = subjectState;
                 },
               ),
+              const Text(
+                "*Click Reset button before calculating another GPA",
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Colors.red,
+                ),
+              )
             ],
           ),
         ),
         bottomNavigationBar: BottomAppBar(
+          padding: EdgeInsets.all(0),
           color: Color.fromARGB(255, 75, 150, 68),
           height: 55,
           child: Row(
@@ -205,7 +213,6 @@ class _firstfirstState extends State<firstfirst> {
                             },
                             child: Container(
                               alignment: Alignment.center,
-                              padding: const EdgeInsets.all(10),
                               decoration: const BoxDecoration(
                                 color: Color.fromARGB(255, 94, 167, 88),
                                 borderRadius:

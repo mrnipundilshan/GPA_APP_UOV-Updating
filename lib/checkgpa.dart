@@ -228,7 +228,10 @@ class _checkresultState extends State<checkresult> {
         ),
         child: const Text(
           'View GPA',
-          style: TextStyle(fontSize: 19),
+          style: TextStyle(
+            fontSize: 19,
+            color: Colors.white,
+          ),
         ),
       ),
     );

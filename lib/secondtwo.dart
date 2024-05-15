@@ -119,7 +119,10 @@ class _secondtwoState extends State<secondtwo> {
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.arrow_back_outlined),
+                    Icon(
+                      Icons.arrow_back_outlined,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
               ),
@@ -191,7 +194,10 @@ class _secondtwoState extends State<secondtwo> {
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.arrow_forward_outlined),
+                    Icon(
+                      Icons.arrow_forward_outlined,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
               ),

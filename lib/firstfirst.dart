@@ -44,7 +44,7 @@ class _firstfirstState extends State<firstfirst> {
             //scrollDirection: Axis.vertical,
             children: [
               Subject(
-                subname: "Fundamentals of Information Technology",
+                subname: "Fundamentals of IT",
                 credit: 3,
                 dropdownService: oitDropdownService,
                 onSubjectStateCreated: (subjectState) {
@@ -154,7 +154,10 @@ class _firstfirstState extends State<firstfirst> {
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.refresh_outlined),
+                    Icon(
+                      Icons.refresh_outlined,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
               ),
@@ -226,7 +229,10 @@ class _firstfirstState extends State<firstfirst> {
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.arrow_forward_outlined),
+                    Icon(
+                      Icons.arrow_forward_outlined,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
               ),

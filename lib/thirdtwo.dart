@@ -58,7 +58,7 @@ class _thirdtwoState extends State<thirdtwo> {
                 dropdownService: thcDropdownService,
               ),
               Subject(
-                subname: "Advanced Database Management Systems",
+                subname: "Advanced Database Mang. Sys.",
                 credit: 3,
                 onSubjectStateCreated: (subjectState) {
                   this.tadb = subjectState;
@@ -127,7 +127,10 @@ class _thirdtwoState extends State<thirdtwo> {
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.arrow_back_outlined),
+                    Icon(
+                      Icons.arrow_back_outlined,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
               ),

@@ -258,7 +258,10 @@ class _finalresultState extends State<finalresult> {
                 },
                 child: const Text(
                   'Back',
-                  style: TextStyle(fontSize: 19),
+                  style: TextStyle(
+                    fontSize: 19,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ],

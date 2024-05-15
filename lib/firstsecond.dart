@@ -51,7 +51,7 @@ class _firstsecondState extends State<firstsecond> {
             //scrollDirection: Axis.vertical,
             children: [
               Subject(
-                subname: "Object Oriented Design and Programming",
+                subname: "Object Oriented Design and Pro.",
                 credit: 4,
                 onSubjectStateCreated: (subjectState) {
                   this.ooop = subjectState;
@@ -128,7 +128,10 @@ class _firstsecondState extends State<firstsecond> {
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.arrow_back_outlined),
+                    Icon(
+                      Icons.arrow_back_outlined,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
               ),
@@ -201,7 +204,10 @@ class _firstsecondState extends State<firstsecond> {
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.arrow_forward_outlined),
+                    Icon(
+                      Icons.arrow_forward_outlined,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
               ),

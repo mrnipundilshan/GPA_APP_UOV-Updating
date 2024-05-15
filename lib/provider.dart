@@ -71,6 +71,7 @@ class Dropdownservice extends ChangeNotifier {
   double aftermultiple = 0.0;
   String semfinaldouble = "-";
   double semfinalnotformattedgpa = 0.0;
+  double count = 0;
 
   double finalgpa = 0.0;
 
@@ -127,6 +128,7 @@ class Dropdownservice extends ChangeNotifier {
     semfinaldouble = "-";
     semfinalnotformattedgpa = 0.0;
     finalgpa = 0.0;
+    count = 0.0;
     notifyListeners();
   }
 }

@@ -12,6 +12,13 @@ class finalresult extends StatefulWidget {
 class _finalresultState extends State<finalresult> {
   // Create separate instances of Dropdownservice
 
+  double finaldoublegpa = oneoneDropdownService.finalgpa +
+      onetwoDropdownService.finalgpa +
+      twooneDropdownService.finalgpa +
+      twotwoDropdownService.finalgpa +
+      thirdoneDropdownService.finalgpa +
+      thirdtwoDropdownService.finalgpa;
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -207,9 +214,9 @@ class _finalresultState extends State<finalresult> {
                         fontWeight: FontWeight.w500),
                   ),
                   const SizedBox(height: 8),
-                  const Text(
-                    "4.0",
-                    style: TextStyle(
+                  Text(
+                    "$finaldoublegpa",
+                    style: const TextStyle(
                         fontSize: 29.2,
                         color: Colors.white,
                         fontWeight: FontWeight.w500),

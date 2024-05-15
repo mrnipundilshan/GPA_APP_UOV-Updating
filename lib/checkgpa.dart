@@ -37,6 +37,7 @@ class _checkresultState extends State<checkresult> {
               oneoneDropdownService.setsemfinaldouble(formattedValue);
               oneoneDropdownService
                   .setsemfinalnotformattedgpa(oneoneDropdownService.finalgpa);
+              oneoneDropdownService.count = 1.0;
             });
           }
 
@@ -67,6 +68,7 @@ class _checkresultState extends State<checkresult> {
               onetwoDropdownService.setsemfinaldouble(formattedValue);
               onetwoDropdownService
                   .setsemfinalnotformattedgpa(onetwoDropdownService.finalgpa);
+              onetwoDropdownService.count = 1.0;
             });
           }
 
@@ -90,6 +92,7 @@ class _checkresultState extends State<checkresult> {
               twooneDropdownService.setsemfinaldouble(formattedValue);
               twooneDropdownService
                   .setsemfinalnotformattedgpa(twooneDropdownService.finalgpa);
+              twooneDropdownService.count = 1.0;
             });
           }
 
@@ -113,6 +116,7 @@ class _checkresultState extends State<checkresult> {
               twotwoDropdownService.setsemfinaldouble(formattedValue);
               twotwoDropdownService
                   .setsemfinalnotformattedgpa(twotwoDropdownService.finalgpa);
+              twotwoDropdownService.count = 1.0;
             });
           }
 
@@ -138,6 +142,7 @@ class _checkresultState extends State<checkresult> {
               thirdoneDropdownService.setsemfinaldouble(formattedValue);
               thirdoneDropdownService
                   .setsemfinalnotformattedgpa(thirdoneDropdownService.finalgpa);
+              thirdoneDropdownService.count = 1.0;
             });
           }
 
@@ -163,6 +168,7 @@ class _checkresultState extends State<checkresult> {
               thirdtwoDropdownService.setsemfinaldouble(formattedValue);
               thirdtwoDropdownService
                   .setsemfinalnotformattedgpa(thirdtwoDropdownService.finalgpa);
+              thirdtwoDropdownService.count = 1.0;
             });
           }
 

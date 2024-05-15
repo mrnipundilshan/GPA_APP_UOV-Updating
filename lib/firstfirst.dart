@@ -147,6 +147,8 @@ class _firstfirstState extends State<firstfirst> {
                     tpcDropdownService.resetall();
                     tmulcDropdownService.resetall();
                     torDropdownService.resetall();
+
+                    thirdtwoDropdownService.resetall();
                   });
                 },
                 child: const Row(

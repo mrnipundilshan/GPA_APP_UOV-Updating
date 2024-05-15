@@ -12,12 +12,18 @@ class finalresult extends StatefulWidget {
 class _finalresultState extends State<finalresult> {
   // Create separate instances of Dropdownservice
 
-  double finaldoublegpa = oneoneDropdownService.finalgpa +
-      onetwoDropdownService.finalgpa +
-      twooneDropdownService.finalgpa +
-      twotwoDropdownService.finalgpa +
-      thirdoneDropdownService.finalgpa +
-      thirdtwoDropdownService.finalgpa;
+  double finaldoublegpa = (oneoneDropdownService.finalgpa +
+          onetwoDropdownService.finalgpa +
+          twooneDropdownService.finalgpa +
+          twotwoDropdownService.finalgpa +
+          thirdoneDropdownService.finalgpa +
+          thirdtwoDropdownService.finalgpa) /
+      (oneoneDropdownService.count +
+          onetwoDropdownService.count +
+          twooneDropdownService.count +
+          twotwoDropdownService.count +
+          thirdoneDropdownService.count +
+          thirdtwoDropdownService.count);
 
   @override
   Widget build(BuildContext context) {

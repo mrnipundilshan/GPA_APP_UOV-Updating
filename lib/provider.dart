@@ -106,4 +106,14 @@ class Dropdownservice extends ChangeNotifier {
     semfinaldouble = value;
     notifyListeners();
   }
+
+  resetall() {
+    selectedresult = null;
+    grademarkscheck = 0.0;
+    grademarks = 0.0;
+    aftermultiple = 0.0;
+    semfinaldouble = "-";
+    semfinalnotformattedgpa = 0.0;
+    notifyListeners();
+  }
 }

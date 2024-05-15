@@ -64,7 +64,7 @@ class _finalresultState extends State<finalresult> {
                             style: const TextStyle(fontSize: 18.0),
                           ),
                           Text(
-                            "${oneoneDropdownService.semfinaldouble}",
+                            oneoneDropdownService.semfinaldouble,
                             style: const TextStyle(fontSize: 18.0),
                           ),
                         ],
@@ -76,7 +76,7 @@ class _finalresultState extends State<finalresult> {
                             style: const TextStyle(fontSize: 18.0),
                           ),
                           Text(
-                            "${onetwoDropdownService.semfinaldouble}",
+                            onetwoDropdownService.semfinaldouble,
                             style: const TextStyle(fontSize: 18.0),
                           ),
                         ],
@@ -115,7 +115,7 @@ class _finalresultState extends State<finalresult> {
                             style: const TextStyle(fontSize: 18.0),
                           ),
                           Text(
-                            "${twooneDropdownService.semfinaldouble}",
+                            twooneDropdownService.semfinaldouble,
                             style: const TextStyle(fontSize: 18.0),
                           ),
                         ],
@@ -127,7 +127,58 @@ class _finalresultState extends State<finalresult> {
                             style: const TextStyle(fontSize: 18.0),
                           ),
                           Text(
-                            "${twotwoDropdownService.semfinaldouble}",
+                            twotwoDropdownService.semfinaldouble,
+                            style: const TextStyle(fontSize: 18.0),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              height: 120.0,
+              width: 380,
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(64, 97, 149, 91),
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              margin: const EdgeInsets.only(bottom: 10),
+              child: Column(
+                children: [
+                  const SizedBox(height: 15),
+                  const Text(
+                    "3rd Year",
+                    style: TextStyle(
+                        fontSize: 19.2,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        children: [
+                          const Text(
+                            "1st semester",
+                            style: const TextStyle(fontSize: 18.0),
+                          ),
+                          Text(
+                            thirdoneDropdownService.semfinaldouble,
+                            style: const TextStyle(fontSize: 18.0),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          const Text(
+                            "2nd semester",
+                            style: const TextStyle(fontSize: 18.0),
+                          ),
+                          Text(
+                            thirdtwoDropdownService.semfinaldouble,
                             style: const TextStyle(fontSize: 18.0),
                           ),
                         ],

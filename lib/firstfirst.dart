@@ -97,7 +97,58 @@ class _firstfirstState extends State<firstfirst> {
                   backgroundColor:
                       Color.fromARGB(255, 0, 70, 0), // Background color
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    oitDropdownService.resetall();
+                    omathsDropdownService.resetall();
+                    oproDropdownService.resetall();
+                    owebDropdownService.resetall();
+                    ostatDropdownService.resetall();
+
+                    oneoneDropdownService.resetall();
+
+                    ooopDropdownService.resetall();
+                    odbmsDropdownService.resetall();
+                    opmDropdownService.resetall();
+                    opcnDropdownService.resetall();
+                    oelecDropdownService.resetall();
+                    omathcDropdownService.resetall();
+
+                    onetwoDropdownService.resetall();
+
+                    sdsDropdownService.resetall();
+                    sseDropdownService.resetall();
+                    swpDropdownService.resetall();
+                    svpDropdownService.resetall();
+                    scgDropdownService.resetall();
+
+                    twooneDropdownService.resetall();
+
+                    smisDropdownService.resetall();
+                    sdaDropdownService.resetall();
+                    swsDropdownService.resetall();
+                    sosDropdownService.resetall();
+                    sspDropdownService.resetall();
+
+                    twotwoDropdownService.resetall();
+
+                    tkbDropdownService.resetall();
+                    tcsDropdownService.resetall();
+                    tmcDropdownService.resetall();
+                    tdiDropdownService.resetall();
+                    tdsqDropdownService.resetall();
+                    tgpDropdownService.resetall();
+
+                    thirdoneDropdownService.resetall();
+
+                    thcDropdownService.resetall();
+                    tadbDropdownService.resetall();
+                    tecDropdownService.resetall();
+                    tpcDropdownService.resetall();
+                    tmulcDropdownService.resetall();
+                    torDropdownService.resetall();
+                  });
+                },
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

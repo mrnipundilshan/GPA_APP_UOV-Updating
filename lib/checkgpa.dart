@@ -115,14 +115,15 @@ class _checkresultState extends State<checkresult> {
               tdsqDropdownService.grademarkscheck == 1 &&
               tgpDropdownService.grademarkscheck == 1) {
             setState(() {
-              double tkbgpa = tcsDropdownService.aftermultiple;
-              double tcsgpa = tmcDropdownService.aftermultiple;
+              double tkbgpa = tkbDropdownService.aftermultiple;
+              double tcsgpa = tcsDropdownService.aftermultiple;
+              double tmcgpa = tmcDropdownService.aftermultiple;
               double tdigpa = tdiDropdownService.aftermultiple;
               double tdsqgpa = tdsqDropdownService.aftermultiple;
               double tgpgpa = tgpDropdownService.aftermultiple;
 
               double finalt1gpa =
-                  (tkbgpa + tcsgpa + tdigpa + tdsqgpa + tgpgpa) / 15;
+                  (tkbgpa + tcsgpa + tdigpa + tdsqgpa + tgpgpa + tmcgpa) / 15;
 
               String formattedValue = finalt1gpa.toStringAsFixed(decimalPlaces);
               thirdoneDropdownService.setsemfinaldouble(formattedValue);

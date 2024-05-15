@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newgpa/checkgpa.dart';
 import 'package:newgpa/provider.dart';
-import 'package:newgpa/secondone.dart';
 import 'package:newgpa/thirdone.dart';
 import 'subject.dart';
 
@@ -18,11 +17,12 @@ class _thirdtwoState extends State<thirdtwo> {
   String finalre = "--";
   int decimalPlaces = 4;
 
-  late SubjectState smis;
-  late SubjectState sda;
-  late SubjectState sws;
-  late SubjectState sos;
-  late SubjectState ssp;
+  late SubjectState thc;
+  late SubjectState tadb;
+  late SubjectState tec;
+  late SubjectState tpc;
+  late SubjectState tmulc;
+  late SubjectState tor;
 
   @override
   Widget build(BuildContext context) {
@@ -53,49 +53,49 @@ class _thirdtwoState extends State<thirdtwo> {
                 subname: "Human Computer Interaction",
                 credit: 3,
                 onSubjectStateCreated: (subjectState) {
-                  this.smis = subjectState;
+                  this.thc = subjectState;
                 },
-                dropdownService: smisDropdownService,
+                dropdownService: thcDropdownService,
               ),
               Subject(
                 subname: "Advanced Database Management Systems",
                 credit: 3,
                 onSubjectStateCreated: (subjectState) {
-                  this.sda = subjectState;
+                  this.tadb = subjectState;
                 },
-                dropdownService: sdaDropdownService,
+                dropdownService: tadbDropdownService,
               ),
               Subject(
                 subname: "E-Commerce",
                 credit: 2,
                 onSubjectStateCreated: (subjectState) {
-                  this.sws = subjectState;
+                  this.tec = subjectState;
                 },
-                dropdownService: swsDropdownService,
+                dropdownService: tecDropdownService,
               ),
               Subject(
                 subname: "Parallel Computing",
                 credit: 3,
                 onSubjectStateCreated: (subjectState) {
-                  this.sos = subjectState;
+                  this.tpc = subjectState;
                 },
-                dropdownService: sosDropdownService,
+                dropdownService: tpcDropdownService,
               ),
               Subject(
                 subname: "Multimedia Computing",
                 credit: 2,
                 onSubjectStateCreated: (subjectState) {
-                  this.ssp = subjectState;
+                  this.tmulc = subjectState;
                 },
-                dropdownService: sspDropdownService,
+                dropdownService: tmulcDropdownService,
               ),
               Subject(
                 subname: "Operations Research",
                 credit: 2,
                 onSubjectStateCreated: (subjectState) {
-                  this.ssp = subjectState;
+                  this.tor = subjectState;
                 },
-                dropdownService: sspDropdownService,
+                dropdownService: torDropdownService,
               ),
             ],
           ),
@@ -116,7 +116,7 @@ class _thirdtwoState extends State<thirdtwo> {
                     context,
                     PageRouteBuilder(
                       pageBuilder: (context, animation, secondaryAnimation) =>
-                          secondone(),
+                          thirdone(),
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) {
                         return child;
@@ -137,25 +137,7 @@ class _thirdtwoState extends State<thirdtwo> {
                   backgroundColor:
                       Color.fromARGB(255, 0, 70, 0), // Background color
                 ),
-                onPressed: () {
-                  if (smisDropdownService.grademarkscheck == 1 &&
-                      sdaDropdownService.grademarkscheck == 1 &&
-                      swsDropdownService.grademarkscheck == 1 &&
-                      sosDropdownService.grademarkscheck == 1 &&
-                      sspDropdownService.grademarkscheck == 1) {
-                    Navigator.push(
-                      context,
-                      PageRouteBuilder(
-                        pageBuilder: (context, animation, secondaryAnimation) =>
-                            thirdone(),
-                        transitionsBuilder:
-                            (context, animation, secondaryAnimation, child) {
-                          return child;
-                        },
-                      ),
-                    );
-                  }
-                },
+                onPressed: () {},
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

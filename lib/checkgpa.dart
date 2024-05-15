@@ -130,6 +130,29 @@ class _checkresultState extends State<checkresult> {
             });
           }
 
+          if (thcDropdownService.grademarkscheck == 1 &&
+              tadbDropdownService.grademarkscheck == 1 &&
+              tecDropdownService.grademarkscheck == 1 &&
+              tpcDropdownService.grademarkscheck == 1 &&
+              tmulcDropdownService.grademarkscheck == 1 &&
+              torDropdownService.grademarkscheck == 1) {
+            setState(() {
+              double thcgpa = thcDropdownService.aftermultiple;
+              double tadbgpa = tadbDropdownService.aftermultiple;
+              double tecgpa = tecDropdownService.aftermultiple;
+              double tpcgpa = tpcDropdownService.aftermultiple;
+              double tmulcgpa = tmulcDropdownService.aftermultiple;
+              double torgpa = torDropdownService.aftermultiple;
+
+              double finalt2gpa =
+                  (thcgpa + tadbgpa + tecgpa + tpcgpa + tmulcgpa + torgpa) / 15;
+
+              String formattedValue = finalt2gpa.toStringAsFixed(decimalPlaces);
+              thirdtwoDropdownService.setsemfinaldouble(formattedValue);
+              thirdtwoDropdownService.setsemfinalnotformattedgpa(finalt2gpa);
+            });
+          }
+
           Navigator.push(
             context,
             PageRouteBuilder(

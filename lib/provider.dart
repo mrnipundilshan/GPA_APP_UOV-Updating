@@ -33,6 +33,15 @@ final Dropdownservice sspDropdownService = Dropdownservice();
 
 final Dropdownservice twotwoDropdownService = Dropdownservice();
 
+final Dropdownservice tkbDropdownService = Dropdownservice();
+final Dropdownservice tcsDropdownService = Dropdownservice();
+final Dropdownservice tmcDropdownService = Dropdownservice();
+final Dropdownservice tdiDropdownService = Dropdownservice();
+final Dropdownservice tdsqDropdownService = Dropdownservice();
+final Dropdownservice tgpDropdownService = Dropdownservice();
+
+final Dropdownservice thirdoneDropdownService = Dropdownservice();
+
 class Dropdownservice extends ChangeNotifier {
   var resultlist = [
     'A+ / A',

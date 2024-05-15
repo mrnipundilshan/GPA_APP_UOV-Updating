@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:newgpa/checkgpa.dart';
-import 'package:newgpa/firstsecond.dart';
 import 'package:newgpa/provider.dart';
 import 'package:newgpa/secondone.dart';
+import 'package:newgpa/thirdone.dart';
 import 'subject.dart';
 
 class secondtwo extends StatefulWidget {
@@ -139,7 +139,7 @@ class _secondtwoState extends State<secondtwo> {
                       context,
                       PageRouteBuilder(
                         pageBuilder: (context, animation, secondaryAnimation) =>
-                            firstsecond(),
+                            thirdone(),
                         transitionsBuilder:
                             (context, animation, secondaryAnimation, child) {
                           return child;

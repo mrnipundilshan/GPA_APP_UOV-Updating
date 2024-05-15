@@ -132,19 +132,7 @@ class _thirdtwoState extends State<thirdtwo> {
                 ),
               ),
               checkresult(),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor:
-                      Color.fromARGB(255, 0, 70, 0), // Background color
-                ),
-                onPressed: () {},
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.arrow_forward_outlined),
-                  ],
-                ),
-              ),
+              SizedBox(width: 72),
             ],
           ),
         ),

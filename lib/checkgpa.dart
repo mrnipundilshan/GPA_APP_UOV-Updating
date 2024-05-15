@@ -79,7 +79,7 @@ class _checkresultState extends State<checkresult> {
               double scgcgpa = scgDropdownService.aftermultiple;
 
               double finals1gpa =
-                  (sdsgpa + ssegpa + swpgpa + svpgpa + scgcgpa) / 13;
+                  (sdsgpa + ssegpa + swpgpa + svpgpa + scgcgpa) / 15;
 
               String formattedValue = finals1gpa.toStringAsFixed(decimalPlaces);
               twooneDropdownService.setsemfinaldouble(formattedValue);

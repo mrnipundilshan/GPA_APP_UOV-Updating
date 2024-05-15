@@ -50,7 +50,7 @@ class _secondoneState extends State<secondone> {
             children: [
               Subject(
                 subname: "Data Structures",
-                credit: 2,
+                credit: 4,
                 onSubjectStateCreated: (subjectState) {
                   this.sds = subjectState;
                 },

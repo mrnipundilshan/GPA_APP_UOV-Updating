@@ -233,6 +233,7 @@ class _finalresultState extends State<finalresult> {
           ]),
         ),
         bottomNavigationBar: BottomAppBar(
+          padding: EdgeInsets.all(0),
           color: Color.fromARGB(255, 75, 150, 68),
           height: 55,
           child: Row(

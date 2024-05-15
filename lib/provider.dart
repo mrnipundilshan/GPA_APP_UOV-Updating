@@ -72,6 +72,8 @@ class Dropdownservice extends ChangeNotifier {
   String semfinaldouble = "-";
   double semfinalnotformattedgpa = 0.0;
 
+  double finalgpa = 0.0;
+
   setresultvalue(value) {
     selectedresult = value;
     notifyListeners();
@@ -79,22 +81,27 @@ class Dropdownservice extends ChangeNotifier {
 
   setgrademarkscheck() {
     grademarkscheck = 1.0;
+    notifyListeners();
   }
 
   viewgrademarkscheck() {
     print(grademarkscheck);
+    notifyListeners();
   }
 
   setgrademarks(marks) {
     grademarks = marks;
+    notifyListeners();
   }
 
   viewgrademarks() {
     print(grademarks);
+    notifyListeners();
   }
 
   getresult() {
     print(selectedresult);
+    notifyListeners();
   }
 
   setsemfinalnotformattedgpa(value) {
@@ -107,6 +114,11 @@ class Dropdownservice extends ChangeNotifier {
     notifyListeners();
   }
 
+  setfinalegpa(value) {
+    finalgpa = value;
+    notifyListeners();
+  }
+
   resetall() {
     selectedresult = null;
     grademarkscheck = 0.0;
@@ -114,6 +126,7 @@ class Dropdownservice extends ChangeNotifier {
     aftermultiple = 0.0;
     semfinaldouble = "-";
     semfinalnotformattedgpa = 0.0;
+    finalgpa = 0.0;
     notifyListeners();
   }
 }

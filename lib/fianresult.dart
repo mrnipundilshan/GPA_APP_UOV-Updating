@@ -188,6 +188,35 @@ class _finalresultState extends State<finalresult> {
                 ],
               ),
             ),
+            Container(
+              height: 120.0,
+              width: 380,
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(64, 97, 149, 91),
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              margin: const EdgeInsets.only(bottom: 10),
+              child: Column(
+                children: [
+                  const SizedBox(height: 15),
+                  const Text(
+                    "Final GPA",
+                    style: TextStyle(
+                        fontSize: 29.2,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    "4.0",
+                    style: TextStyle(
+                        fontSize: 29.2,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ],
+              ),
+            ),
           ]),
         ),
         bottomNavigationBar: BottomAppBar(

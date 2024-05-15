@@ -29,12 +29,14 @@ class _checkresultState extends State<checkresult> {
               double oprogpa = oproDropdownService.aftermultiple;
               double owebgpa = owebDropdownService.aftermultiple;
               double ostatgpa = ostatDropdownService.aftermultiple;
-              double finalo1gpa =
+              oneoneDropdownService.finalgpa =
                   (oitgpa + mathsgpa + oprogpa + owebgpa + ostatgpa) / 15;
 
-              String formattedValue = finalo1gpa.toStringAsFixed(decimalPlaces);
+              String formattedValue =
+                  oneoneDropdownService.finalgpa.toStringAsFixed(decimalPlaces);
               oneoneDropdownService.setsemfinaldouble(formattedValue);
-              oneoneDropdownService.setsemfinalnotformattedgpa(finalo1gpa);
+              oneoneDropdownService
+                  .setsemfinalnotformattedgpa(oneoneDropdownService.finalgpa);
             });
           }
 
@@ -52,7 +54,7 @@ class _checkresultState extends State<checkresult> {
               double omathcgpa = omathcDropdownService.aftermultiple;
               double oelecgpa = oelecDropdownService.aftermultiple;
 
-              double finalo2gpa = (ooopgpa +
+              onetwoDropdownService.finalgpa = (ooopgpa +
                       odbmsgpa +
                       opmgpa +
                       opcgpa +
@@ -60,9 +62,11 @@ class _checkresultState extends State<checkresult> {
                       oelecgpa) /
                   15;
 
-              String formattedValue = finalo2gpa.toStringAsFixed(decimalPlaces);
+              String formattedValue =
+                  onetwoDropdownService.finalgpa.toStringAsFixed(decimalPlaces);
               onetwoDropdownService.setsemfinaldouble(formattedValue);
-              onetwoDropdownService.setsemfinalnotformattedgpa(finalo2gpa);
+              onetwoDropdownService
+                  .setsemfinalnotformattedgpa(onetwoDropdownService.finalgpa);
             });
           }
 
@@ -78,12 +82,14 @@ class _checkresultState extends State<checkresult> {
               double svpgpa = svpDropdownService.aftermultiple;
               double scgcgpa = scgDropdownService.aftermultiple;
 
-              double finals1gpa =
+              twooneDropdownService.finalgpa =
                   (sdsgpa + ssegpa + swpgpa + svpgpa + scgcgpa) / 15;
 
-              String formattedValue = finals1gpa.toStringAsFixed(decimalPlaces);
+              String formattedValue =
+                  twooneDropdownService.finalgpa.toStringAsFixed(decimalPlaces);
               twooneDropdownService.setsemfinaldouble(formattedValue);
-              twooneDropdownService.setsemfinalnotformattedgpa(finals1gpa);
+              twooneDropdownService
+                  .setsemfinalnotformattedgpa(twooneDropdownService.finalgpa);
             });
           }
 
@@ -99,12 +105,14 @@ class _checkresultState extends State<checkresult> {
               double sosgpa = sosDropdownService.aftermultiple;
               double sspgpa = sspDropdownService.aftermultiple;
 
-              double finals2gpa =
+              twotwoDropdownService.finalgpa =
                   (smisgpa + sdagpa + swsgpa + sosgpa + sspgpa) / 15;
 
-              String formattedValue = finals2gpa.toStringAsFixed(decimalPlaces);
+              String formattedValue =
+                  twotwoDropdownService.finalgpa.toStringAsFixed(decimalPlaces);
               twotwoDropdownService.setsemfinaldouble(formattedValue);
-              twotwoDropdownService.setsemfinalnotformattedgpa(finals2gpa);
+              twotwoDropdownService
+                  .setsemfinalnotformattedgpa(twotwoDropdownService.finalgpa);
             });
           }
 
@@ -122,12 +130,14 @@ class _checkresultState extends State<checkresult> {
               double tdsqgpa = tdsqDropdownService.aftermultiple;
               double tgpgpa = tgpDropdownService.aftermultiple;
 
-              double finalt1gpa =
+              thirdoneDropdownService.finalgpa =
                   (tkbgpa + tcsgpa + tdigpa + tdsqgpa + tgpgpa + tmcgpa) / 15;
 
-              String formattedValue = finalt1gpa.toStringAsFixed(decimalPlaces);
+              String formattedValue = thirdoneDropdownService.finalgpa
+                  .toStringAsFixed(decimalPlaces);
               thirdoneDropdownService.setsemfinaldouble(formattedValue);
-              thirdoneDropdownService.setsemfinalnotformattedgpa(finalt1gpa);
+              thirdoneDropdownService
+                  .setsemfinalnotformattedgpa(thirdoneDropdownService.finalgpa);
             });
           }
 
@@ -145,12 +155,14 @@ class _checkresultState extends State<checkresult> {
               double tmulcgpa = tmulcDropdownService.aftermultiple;
               double torgpa = torDropdownService.aftermultiple;
 
-              double finalt2gpa =
+              thirdtwoDropdownService.finalgpa =
                   (thcgpa + tadbgpa + tecgpa + tpcgpa + tmulcgpa + torgpa) / 15;
 
-              String formattedValue = finalt2gpa.toStringAsFixed(decimalPlaces);
+              String formattedValue = thirdtwoDropdownService.finalgpa
+                  .toStringAsFixed(decimalPlaces);
               thirdtwoDropdownService.setsemfinaldouble(formattedValue);
-              thirdtwoDropdownService.setsemfinalnotformattedgpa(finalt2gpa);
+              thirdtwoDropdownService
+                  .setsemfinalnotformattedgpa(thirdtwoDropdownService.finalgpa);
             });
           }
 

@@ -221,7 +221,7 @@ class _finalresultState extends State<finalresult> {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    "$finaldoublegpa",
+                    "${finaldoublegpa.toStringAsFixed(4)}",
                     style: const TextStyle(
                         fontSize: 29.2,
                         color: Colors.white,

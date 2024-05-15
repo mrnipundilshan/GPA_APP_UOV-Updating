@@ -95,6 +95,10 @@ class _finalresultState extends State<finalresult> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor:
+                      Color.fromARGB(255, 0, 70, 0), // Background color
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -108,7 +112,10 @@ class _finalresultState extends State<finalresult> {
                     ),
                   );
                 },
-                child: Text('Back'),
+                child: const Text(
+                  'Back',
+                  style: TextStyle(fontSize: 19),
+                ),
               ),
             ],
           ),

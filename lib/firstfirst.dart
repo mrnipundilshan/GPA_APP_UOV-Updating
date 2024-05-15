@@ -101,12 +101,16 @@ class _firstfirstState extends State<firstfirst> {
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.restore),
+                    Icon(Icons.refresh_outlined),
                   ],
                 ),
               ),
               checkresult(),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor:
+                      Color.fromARGB(255, 0, 70, 0), // Background color
+                ),
                 onPressed: () {
                   if (oitDropdownService.grademarkscheck == 1 &&
                       omathsDropdownService.grademarkscheck == 1 &&
@@ -166,7 +170,12 @@ class _firstfirstState extends State<firstfirst> {
                     );
                   }
                 },
-                child: Text('Next Sem'),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.arrow_forward_outlined),
+                  ],
+                ),
               ),
             ],
           ),

@@ -107,6 +107,10 @@ class _firstsecondState extends State<firstsecond> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor:
+                      Color.fromARGB(255, 0, 70, 0), // Background color
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -120,12 +124,45 @@ class _firstsecondState extends State<firstsecond> {
                     ),
                   );
                 },
-                child: Text('Previous Sem'),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.arrow_back_outlined),
+                  ],
+                ),
               ),
               checkresult(),
               ElevatedButton(
-                onPressed: () {},
-                child: Text('Next Sem'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor:
+                      Color.fromARGB(255, 0, 70, 0), // Background color
+                ),
+                onPressed: () {
+                  if (ooopDropdownService.grademarkscheck == 1 &&
+                      odbmsDropdownService.grademarkscheck == 1 &&
+                      opmDropdownService.grademarkscheck == 1 &&
+                      opcnDropdownService.grademarkscheck == 1 &&
+                      omathcDropdownService.grademarkscheck == 1 &&
+                      oelecDropdownService.grademarkscheck == 1) {
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) =>
+                            firstsecond(),
+                        transitionsBuilder:
+                            (context, animation, secondaryAnimation, child) {
+                          return child;
+                        },
+                      ),
+                    );
+                  }
+                },
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.arrow_forward_outlined),
+                  ],
+                ),
               ),
             ],
           ),

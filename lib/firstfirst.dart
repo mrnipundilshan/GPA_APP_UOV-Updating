@@ -92,6 +92,19 @@ class _firstfirstState extends State<firstfirst> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor:
+                      Color.fromARGB(255, 0, 70, 0), // Background color
+                ),
+                onPressed: () {},
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.restore),
+                  ],
+                ),
+              ),
               checkresult(),
               ElevatedButton(
                 onPressed: () {

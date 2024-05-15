@@ -79,7 +79,7 @@ class _checkresultState extends State<checkresult> {
           );
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.green, // Background color
+          backgroundColor: Color.fromARGB(255, 0, 70, 0), // Background color
         ),
         child: const Text(
           'View GPA',

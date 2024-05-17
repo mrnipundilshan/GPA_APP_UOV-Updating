@@ -30,6 +30,12 @@ class Subject extends StatefulWidget {
 class SubjectState extends State<Subject> {
   @override
   Widget build(BuildContext context) {
+    double baseFontSize = 19.2;
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
+    double responsiveFontSize = baseFontSize * (screenWidth / 400);
+
     return Container(
       height: 100.0,
       width: 380,
@@ -43,8 +49,8 @@ class SubjectState extends State<Subject> {
           const SizedBox(height: 15),
           Text(
             widget.subname,
-            style: const TextStyle(
-                fontSize: 19.2,
+            style: TextStyle(
+                fontSize: responsiveFontSize,
                 color: Colors.white,
                 fontWeight: FontWeight.w500),
           ),
